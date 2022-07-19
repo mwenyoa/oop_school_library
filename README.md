@@ -11,7 +11,6 @@
 - [x] Linter: [Rubocop](https://rubocop.org/)
 - [x] VS Code
 
-
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
