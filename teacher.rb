@@ -10,7 +10,3 @@ class Teacher < Person
     true
   end
 end
-
-# def initialize(specialization, age, name: 'Unknown', parent_permission: true)
-
-# def initialize(age, name: 'Unknown', parent_permission: true)
