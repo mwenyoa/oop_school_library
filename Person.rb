@@ -1,6 +1,6 @@
 class Person
   # contructor
-  def initialize(age, parent_permission: true, name = 'Unknown')
+  def initialize(age, parent_permission: true, name: 'Unknown')
     @id = Random.rand(1..10_000)
     @name = name
     @age = age
@@ -21,3 +21,5 @@ class Person
 
   private :of_age?
 end
+
+
