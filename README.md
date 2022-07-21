@@ -2,7 +2,7 @@
 
 # oop_school_library
 
-> **oop_school_library**  is library management system that Implements OOP concepts of   encapsulation and inheritance by the use of objects and decorated classes.
+> **oop_school_library**  is library management system that Implements OOP concepts of   encapsulation and inheritance by the use of objects and decorated classes. Finalized creating the remaining classes for the school library and created the associations between them.
 
 
 ## Built With
