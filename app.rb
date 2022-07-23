@@ -125,4 +125,11 @@ def list_rentals
   @rentals.each do |i|
     puts "Date: #{i.date}, Book: '#{i.book.title}' by #{i.book.author}" if i.person.id.to_i == person_id.to_i
   end
+  
+  # covert date
+  def convert_date(str)
+    Date.parse(str)
+  end
 end
+end
+
