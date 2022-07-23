@@ -23,7 +23,7 @@ class App
     Integer(gets.chomp)
   end
 
-  execute = Apps.new
+  execute = App.new
 
   loop do
     case main_menu
