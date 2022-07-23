@@ -1,6 +1,7 @@
 require_relative('./nameable')
 require_relative('./rental')
 
+# person represents a person in the library
 class Person < Nameable
   attr_accessor :name, :age
   attr_reader :id, :rentals, :parent_permission
