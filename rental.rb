@@ -1,6 +1,7 @@
 require_relative './book'
 require_relative './person'
 
+# rental represents a rental in the library
 class Rental
   attr_reader :book, :person
   attr_accessor :date
