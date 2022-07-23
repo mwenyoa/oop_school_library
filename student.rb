@@ -1,5 +1,6 @@
 require_relative './person'
 
+# teacher represents a teacher in the library
 class Student < Person
   attr_reader :classroom
 
