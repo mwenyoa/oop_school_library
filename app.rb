@@ -13,6 +13,7 @@ class Apps
   end
 end
 
+# list books
 def list_books
   if @books.empty?
     puts 'No book added yet'
@@ -20,5 +21,16 @@ def list_books
   end
   @books.map do |book|
     puts "Title: \"#{book.title}\", Author: #{book.author}"
+  end
+end
+
+# list people
+def list_people
+  if @people.empty?
+    puts 'No person record created yet'
+    return
+  end
+  @people.map do |person|
+    puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
   end
 end
