@@ -4,3 +4,11 @@ require_relative('./rental')
 require_relative('./student')
 require_relative('./teacher')
 require 'date'
+
+class Apps
+  def initialize
+    @rentals = []
+    @people = []
+    @books = []
+  end
+end
