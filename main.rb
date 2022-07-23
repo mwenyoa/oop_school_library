@@ -1,5 +1,5 @@
 require './app'
-# main menu
+
 class App
   def self.main_menu
     puts 'Welcome to the School Library App!'
@@ -23,22 +23,22 @@ class App
     Integer(gets.chomp)
   end
 
-  execute = App.new
+  run = Apps.new
 
   loop do
     case main_menu
     when 1
-      execute.list_books
+      run.list_books
     when 2
-      execute.list_people
+      run.list_people
     when 3
-      execute.create_person
+      run.create_person
     when 4
-      execute.create_book
+      run.create_book
     when 5
-      execute.create_rental
+      run.create_rental
     when 6
-      execute.list_rentals
+      run.list_rentals
     when 7
       puts 'Thank you for using the app!'
       exit
