@@ -39,7 +39,6 @@ end
 def create_person
   print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
   option = gets.chomp
-
   case option
   when '1'
     create_student
@@ -49,3 +48,18 @@ def create_person
     puts 'That is not a valid input'
     return
   end
+  puts 'Person created successfully'
+end
+
+# create student
+def create_student
+  print 'Age: '
+  age = gets.chomp
+
+  print 'Name: '
+  name = gets.chomp
+
+  student = Student.new(age, name)
+  @people.push(student)
+  puts 'Student Created Successfully'
+end
