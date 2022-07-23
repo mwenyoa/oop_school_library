@@ -1,5 +1,6 @@
 require_relative './person'
 
+# teacher represents a teacher in the library
 class Teacher < Person
   def initialize(specialization, age, name = 'Unknown')
     super(name, age)
