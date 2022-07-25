@@ -54,6 +54,13 @@ Kindly modify the files as needed.
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/anthony-mwenyo/)
 
 
+👤 **Brian Nyachae**
+
+- Github: [@Bria222](https://github.com/Bria222)
+- Twitter: [@briannyachae9](https://twitter.com/briannyachae9)
+- Linkedin: [brian nyachae](https://www.linkedin.com/in/brian-nyachae)
+- E-mail: techconsultants.bree@gmail.com
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
