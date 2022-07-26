@@ -1,13 +1,12 @@
-require_relative './person'
+require './person'
 
-# teacher represents a teacher in the library
 class Teacher < Person
-  def initialize(specialization, age, name = 'Unknown')
-    super(name, age)
+  def initialize(age, specialization, name = 'unknown', parent_permission: true)
+    super(age, name, parent_permission: parent_permission)
     @specialization = specialization
   end
 
-  def can_use_service?
+  def can_use_services?
     true
   end
 end
