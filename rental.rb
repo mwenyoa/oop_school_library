@@ -1,18 +1,22 @@
-require_relative './book'
-require_relative './person'
-
-# rental represents a rental in the library
 class Rental
-  attr_reader :book, :person
   attr_accessor :date
+  attr_reader :person, :book
 
-  def initialize(person, book, date)
+  def initialize(date, person, book)
     @date = date
-
     @person = person
-    person.rentals << self
-
-    @book = book
     book.rentals << self
+    @book = book
+    person.rentals << self
+  end
+
+  def book=(book)
+    @book = book
+    book.rentals << self unless book.rentals.include?(self)
+  end
+
+  def person=(person)
+    @person = person
+    person.rentals << self unless person.rentals.include?(self)
   end
 end

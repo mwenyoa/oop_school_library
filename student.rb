@@ -1,15 +1,14 @@
-require_relative './person'
+require './person'
+require './classroom'
 
-# teacher represents a teacher in the library
 class Student < Person
   attr_reader :classroom
 
-  def initialize(age, name = 'Unknown')
-    @classroom = classroom
-    super(age, name)
+  def initialize(age, name = 'unknown', parent_permission: true)
+    super(age, name, parent_permission: parent_permission)
   end
 
-  def play_hookey
+  def play_hooky
     "¯\(ツ)/¯"
   end
 
