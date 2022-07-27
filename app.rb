@@ -4,6 +4,7 @@ require './book'
 require './rental'
 require './student'
 require './teacher'
+require './file_handler'
 
 class App
   def initialize
@@ -12,6 +13,8 @@ class App
     @rentals = []
     @classroom_one = Classroom.new('A')
   end
+
+  include Library_Handler
 
   def get_option(user_option)
     case user_option
