@@ -1,22 +1,18 @@
-require 'json'
-require './create_file_directory'
-module Library_Handler
-  def save_book(books)
-    book_data = []
-    create_files
-    file = 'data/books.json'
-    return unless File.exist?(file)
+require_relative './app'
 
-    books.each do |book|
-      book_data << { Title: book.title, Author: book.author }
-    end
-    File.write(file, book.json)
+def read_book(file)
+  puts "\n*********BOOKS*********\n"
+
+  file.each do |
+    book_title = el['value']['title']
+    book_author = el['value']['author']
+    puts "Book 
+    add_book(book_title, book_author)
   end
 end
 
-#  load people
 def read_people(file)
-  puts "\n**********************PEOPLE************************\n"
+  puts "\n*********PEOPLE*********\n"
 
   file.each do |el|
     case el['value']['type']
@@ -29,10 +25,24 @@ def read_people(file)
       add_student(student_classroom, student_age, student_name, has_permission)
     when 'Teacher'
       teacher_specialization = el['value']['specialization']
-      teacher_age = el['value']['age']
+      teacher_age = el['value']['age']Title: #{book_title} Book Author: #{book_author}"el|
       teacher_name = el['value']['name']
       puts "Teacher Specialization: #{teacher_specialization} Age: #{teacher_age} Teacher's Name #{teacher_name}"
       add_teacher(teacher_specialization, teacher_age, teacher_name, true)
     end
+  end
+end
+
+def read_rental(ary, book_file, people_file)
+  puts "\n*********RENTAL*********\n"
+
+  ary.each do |el|
+    date_of_rent = el['value']['date']
+    rented_book = el['value']['book']
+    renter = el['value']['person']
+    book = find_book_idx(rented_book, book_file)
+    person = find_person_idx(renter, people_file)
+    puts "Date of Rent: #{date_of_rent} Book: #{book} Person: #{person}"
+    add_rental(date_of_rent, book, person)
   end
 end
