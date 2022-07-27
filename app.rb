@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-require './person'
-require './classroom'
-require './book'
-require './rental'
-require './student'
-require './teacher'
-require './file_handler'
-=======
-require_relative './person'
-require_relative './classroom'
 require_relative './student'
 require_relative './teacher'
 require_relative './book'
 require_relative './rental'
 require_relative './file_handler'
 require 'json'
->>>>>>> 5a18bd15a52d3239d29e016df71a085ed737ed18
 
 class App
   attr_accessor :book_list, :people_list, :rental_list
@@ -26,28 +14,9 @@ class App
     @rental_list = []
   end
 
-<<<<<<< HEAD
-  include Library_Handler
-
-  def get_option(user_option)
-    case user_option
-    when '1'
-      list_books
-    when '2'
-      list_people
-    when '3'
-      create_person
-    when '4'
-      create_book
-    when '5'
-      create_rental
-    when '6'
-      list_rentals
-=======
   def display_books
     @book_list.each_with_index do |book, index|
       puts "(#{index}) Title: \"#{book.title}\", Author: #{book.author}"
->>>>>>> 5a18bd15a52d3239d29e016df71a085ed737ed18
     end
   end
 
@@ -58,7 +27,7 @@ class App
   end
 
   def create_person
-    print 'Do you want to create a student (1) or a teacher (2)?'
+    print 'Do you want to create a student (1) or a teacher (2)? [Input the number]: '
     choice = gets.chomp
     case choice
     when '1'
@@ -87,7 +56,7 @@ class App
     print 'Classroom: '
     student_classroom = gets.chomp
     add_student(student_classroom, student_age, student_name, has_permission)
-    print "\nStudent created successfully.\n"
+    print "Student created successfully.\n"
   end
 
   def add_student(student_classroom, student_age, student_name, has_permission)
@@ -103,7 +72,7 @@ class App
     print 'Specialization: '
     teacher_specialization = gets.chomp.capitalize
     add_teacher(teacher_specialization, teacher_age, teacher_name, true)
-    print "\nTeacher created successfully.\n"
+    print "Teacher created successfully.\n"
   end
 
   def add_teacher(teacher_specialization, teacher_age, teacher_name, has_permission)
@@ -117,7 +86,7 @@ class App
     print 'Author: '
     book_author = gets.chomp.capitalize
     add_book(book_title, book_author)
-    print "\nBook created successfully.\n"
+    print "Book created successfully.\n"
   end
 
   def add_book(book_title, book_author)
@@ -135,7 +104,7 @@ class App
     puts 'Date [yyyy/mm/dd]: '
     date_of_rent = gets.chomp
     add_rental(date_of_rent, rented_book, renter)
-    print "\ln Rental created successfully.\n"
+    print "Rental created successfully.\n"
   end
 
   def add_rental(date_of_rent, rented_book, renter)

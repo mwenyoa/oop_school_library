@@ -1,18 +1,18 @@
 require_relative './app'
 
 def read_book(file)
-  puts "\n*********BOOKS*********\n"
+  puts "\n**********************BOOKS************************\n"
 
-  file.each do |
+  file.each do |el|
     book_title = el['value']['title']
     book_author = el['value']['author']
-    puts "Book 
+    puts "Book Title: #{book_title} Book Author: #{book_author}"
     add_book(book_title, book_author)
   end
 end
 
 def read_people(file)
-  puts "\n*********PEOPLE*********\n"
+  puts "\n**********************PEOPLE************************\n"
 
   file.each do |el|
     case el['value']['type']
@@ -25,7 +25,7 @@ def read_people(file)
       add_student(student_classroom, student_age, student_name, has_permission)
     when 'Teacher'
       teacher_specialization = el['value']['specialization']
-      teacher_age = el['value']['age']Title: #{book_title} Book Author: #{book_author}"el|
+      teacher_age = el['value']['age']
       teacher_name = el['value']['name']
       puts "Teacher Specialization: #{teacher_specialization} Age: #{teacher_age} Teacher's Name #{teacher_name}"
       add_teacher(teacher_specialization, teacher_age, teacher_name, true)
@@ -34,7 +34,7 @@ def read_people(file)
 end
 
 def read_rental(ary, book_file, people_file)
-  puts "\n*********RENTAL*********\n"
+  puts "\n**********************RENTAL************************\n"
 
   ary.each do |el|
     date_of_rent = el['value']['date']
