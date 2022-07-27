@@ -53,3 +53,10 @@ def find_book_idx(ref, path_file)
     return i if ref == el['ref']
   end
 end
+
+def find_person_idx(ref, path_file)
+  find = JSON.parse(path_file)
+  find.each_with_index do |el, i|
+    return i if ref == el['ref']
+  end
+end
