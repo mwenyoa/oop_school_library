@@ -46,3 +46,10 @@ def read_rental(ary, book_file, people_file)
     add_rental(date_of_rent, book, person)
   end
 end
+
+def find_book_idx(ref, path_file)
+  find = JSON.parse(path_file)
+  find.each_with_index do |el, i|
+    return i if ref == el['ref']
+  end
+end
