@@ -42,9 +42,24 @@ In the terminal, go to your file directory and run this command.
 $ git clone https://github.com/mwenyoa/oop_school_library.git
 ```
 
-### Usage
+## Usage
 
-Kindly modify the files as needed.
+ - ### Run tests
+
+To install rspec, in the terminal kindly run this command
+
+```
+$ gem install rspec
+```
+
+To run tests, please run this command
+
+```
+$ rspec ./spec/#{filename}_spec.rb
+```
+
+- Kindly modify the files as needed.
+
 ## Authors
 
  👤 **Anthony Mwenyo**
