@@ -56,6 +56,8 @@ To run tests, please run this command
 
 ```
 $ rspec ./spec/#{filename}_spec.rb
+example:
+$ rspec ./spec/book_spec.rb
 ```
 
 - Kindly modify the files as needed.
